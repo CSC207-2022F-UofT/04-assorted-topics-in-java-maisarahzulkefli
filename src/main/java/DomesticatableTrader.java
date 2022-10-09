@@ -21,6 +21,7 @@ class DomesticatableTrader extends Trader<Domesticatable> {
         super(inventory, wishlist, money);
     }
 
+
     /**
      * Construct a DomesticatableTrader, giving them the
      * given money and an empty wishlist and inventory.

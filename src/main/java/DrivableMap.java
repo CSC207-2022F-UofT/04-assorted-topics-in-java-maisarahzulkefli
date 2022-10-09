@@ -8,6 +8,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -62,7 +63,8 @@ class DrivableMap {
      *       drivable_map.
      */
     public List<Tradable> getTradable() { //takes no arguments
-        List<Tradable> list = new ArrayList<Tradable>((Collection<? extends Tradable>) drivable_map); //list from Tradeable items in driveable_map
+        List<Tradable> list = new ArrayList<Tradable>((Collection<? extends Tradable>) drivable_map);
+        //list from Tradeable items in driveable_map
         //Problem in checking type as Tradeable, given Map is Driveable...
         return list; //return the List
     }

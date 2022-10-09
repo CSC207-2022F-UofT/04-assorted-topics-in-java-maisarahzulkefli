@@ -19,7 +19,6 @@ public class Trader<T> {
     private final List<T> wishlist;
     private int money;
 
-
     /**
      * Construct a Trader, giving them the given inventory,
      * wishlist, and money.
