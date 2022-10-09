@@ -11,3 +11,26 @@
  */
 
 import java.util.List;
+public class DrivableTrader extends Trader<Drivable> { //DrivableTrader  is subclass of Trader, but takes Drivable only
+    //Note that all instances of <T> are now <Drivable>
+    public DrivableTrader(List<Drivable> inventory, List<Drivable> wishlist,
+                          int money) {
+        super(inventory, wishlist, money);
+
+    }
+
+    public DrivableTrader(int i) {
+        super(i);
+    }
+
+    @Override
+    public int getSellingPrice(Drivable object) {
+        int selling_price = super.getSellingPrice(object) + object.getMaxSpeed();
+
+        if(object instanceof Tradable) {
+            return selling_price;
+
+        }
+        return Tradable.MISSING_PRICE;
+    }
+}
